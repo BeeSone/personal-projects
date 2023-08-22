@@ -13,16 +13,16 @@ function eulerMethod(){
     enterVariables();
 
     // State equation
-    console.log("Your equation is: " + a + "x^2 + " + b + "x + " + c + " = 0");
+    console.log("Your equation is: " + a + "x^2 + " + b + "x + " + c + " = y");
 
-    // Ask user what they want to do with the equation
+    // Ask user what they want to do with the equation and do that
     formulaLine();
 }
 
 function enterVariables(){
-    // Simple for loop to assign values for a, b, and c
+    // Simple for loop to let the user assign values for a, b, and c
     for (let i = 0; i < 3; i++)  {
-        const variableInput = readlineSync.question('\nPlease enter a number for ' + letterArray[i] + ': (format ax^2 + bx + c = 0)  : ');
+        const variableInput = readlineSync.question('\nPlease enter a number for ' + letterArray[i] + ': (format ax^2 + bx + c = y)  : ');
         if (letterArray[i] === 'a'){
             a = parseFloat(variableInput);
         }
@@ -64,7 +64,7 @@ function instantaneousDerivative(){
         // Calculation
         let instantDerivativeValue = parseFloat((y2 - y1) / (x2 - x))
         // Output
-        console.log('The instantaneous derivative at x = ' + x + ' is approximately: ' + instantDerivativeValue);
+        console.log('The instantaneous derivative at x = ' + x + ' is approximately: ' + Math.round(100*instantDerivativeValue)/100);
     }
 }
 
