@@ -1,0 +1,47 @@
+body{
+    height: 100%;
+}
+.container{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+background-color: lightyellow;
+height: 100vh;
+}
+
+#consoleViewer {
+    color: blue;
+}
+
+.container-row {
+    padding: 2% 2% 2% 2%;
+    width: 98%;
+    height: 98%;
+    border: 2px dashed red;
+}
+
+#left-side{
+color: aqua;
+width: 65vh;
+text-align: center;
+background-color:black;
+position: relative;
+}
+
+#right-side{
+color: red;
+width:32%;
+text-align: center;
+}
+
+#LCD-screen {
+    margin: 0;
+    color: red;
+    position: absolute;
+    top: 10vh;
+    right: 26vh;
+    /* -ms-transform: translate(-50%, 200.5%); 
+    transform: translateY(-50%, 200.5%); */
+    font-size: 30px;
+    font-family: system-ui;
+}
