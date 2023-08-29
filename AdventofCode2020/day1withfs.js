@@ -5,8 +5,11 @@ const fs = require('fs');
 // turns every string in that array into an int.
 const lines = fs.readFileSync('day1-input.txt', {encoding: 'utf-8'}).split('\n').filter(x => x).map(x => parseInt(x));
 
+// Check first number
 for (let i = 0; i < lines.length; i++){
+    //try combinations with next number
         for (let m = i+1; m < lines.length; m++){
+            // try combinations with third number 
             for (let j = m + 1; j < lines.length; j++){
                 if (lines[i]+lines[m]+lines[j] == 2020){
                     return (
