@@ -1,0 +1,71 @@
+this file is notes from regular expression practice on freecodecamp.org.
+ignore case flag -> i
+    let myRegex = /case/i;
+    myRegex.test("case"); 
+    // returns true
+    // "case" returns the same as "Case", "cAse", and "cASE";
+
+global flag -> g
+    let myRegex = /run/g;
+    let myStr = "run, run, run, far away";
+    myStr.match(myRegex) 
+    // returns ["run", "run", "run",];
+
+character group syntax -> [ ]
+    let myRegex = /[bchl]at/;
+    let myStr = "a big bat";
+    myStr.match(myRegex) --> returns "bat";
+    // myStr could have also been assigned the words "cat", "hat", or "lat", and all three of these strings would've also been returned.
+
+character alphabetical group syntax -> ['char1'-'char2']
+    let myRegex = /[a-h]/g;
+    let myStr = "agefchib";
+    myStr.match(myRegex) --> returns ["a", "g", "e", "f", "c", "h", "b"];
+    // searches for all letters between the two alphabetical ends
+    // you can also search for numbers in this way with the same syntax, or even combine the two syntaxes:
+    // myRegex = /[a-z0-9]/gi --> includes all letters and numbers
+
+character notThisChar syntax -> [^]
+// NOTE: caret means different things inside and outside of brackets
+    let myRegex = /[^aeiou]/gi;
+    myStr.match(myRegex);
+    // returns everything that is not the character or character group(s) specified right after in an array where each char gets its own indice
+
+character oneOrMore syntax -> /'char'+/
+// NOTE: does not act like a global flag, only applies to the character or bracket group that it comes directly after
+    let myRegex = /s+/g;
+    let myStr = "sisterss";
+    myStr.match(myRegex); 
+    // returns array ["s", "s", "ss"]
+
+character zeroOrMore syntax -> /'char'+/
+// NOTE: acts exactly like + written above
+    let myRegex /Cc*/;
+    let myStr = "@amberheard Cccccunt";
+    myStr.match(myRegex);
+    // returns array ["Ccccc"]
+
+Lazy matching syntax -> /'char'*?/
+// NOTE: by default, regular expressions return the largest possible string i.e. starts with t ends with i --> 'titani' NOT 'ti'
+    let myRegex /s[a-z]*?m/;
+    let myStr = 'smegma';
+    myStr.match(myRegex);
+    // returns array ['sm'] NOT ['smegm']
+
+Beginning matching syntax -> /^'char'/ 
+// NOTE: no need for parenthesses or anything for a long string, it will still match
+    let myRegex = /^allg/;
+    let myStr = 'it's allg man'
+    let myStr2 = 'allg bro'
+    myRegex.test(myStr);
+    myRegex.test(myStr2);
+    // test 1 returns false, test 2 returns true
+
+End matching syntax -> /'char'$/
+    let myRegex = /end$/;
+    let myStr = 'this is the end';
+    myStr.match(myRegex);
+    // returns 'caboose'
+
+// NOTE: Beginning and end are more useful as test cases.
+
