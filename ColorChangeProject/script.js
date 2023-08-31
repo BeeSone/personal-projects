@@ -7,9 +7,12 @@ function colorChange(){
     colorChangeIndex == colors.length ? colorChangeIndex = 0 : colorChangeIndex++;
 }
 
+/*
 let bodyColor = window.getComputedStyles(document.getElementsByTagName("body")).color;
 
 function rgbaToHex(rgbaColor){
     const rgbaValues = rgbaColor.match(/\d+/g);
 
 }
+
+*/
