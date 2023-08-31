@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div onload="currentTime()" class="clock" id="clock">
+    </div>
+    <div class="todo-app-container">
+        
+        <div class="todo-title">
+            <h2>To-Do List:</h2>
+            
+        </div>
+        <div class="tasks-area">
+            <div class="tasks">
+                    <input type="text" id="postData">
+                    <button type="button" onclick="postText()" class="postButton" id="postButton">Click me!</button>
+                    <div id="active-tasks">
+
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
