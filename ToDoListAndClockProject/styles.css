@@ -10,7 +10,6 @@ body {
     /* border: 2px solid blue; */
     justify-content: center;
     align-items: center;
-    margin-top: -2vh;
     font-family: system-ui;
 }
 
@@ -52,18 +51,69 @@ body {
     font-size:6vh;
 }
 
- .tasks-area{
+.tasks-area{
     display: flex;
+    flex-direction: column;
     background-color: bisque;
     border: 4px solid black;
     height:56vh;
     box-shadow: -4px 4px 4px black;
     box-shadow: inset 6px 6px 9px black;
-    justify-content: center;
 } 
 
 #postButton{
     justify-content: center;
     align-items: center;
     height: 4vh;
+    border: 0.5vh solid black;
+    border-radius: 0.5vh;
+}
+
+.postClass{ 
+    border: 0.2vw solid black;
+    border-radius: 1vw;
+    height: 8vh;
+    width: 54vw;
+    background-color: antiquewhite;
+    display: flex;
+    /* justify-content: left; */
+    padding-left: 1vw;
+    align-items: center; 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4vh;
+    justify-content: space-between;
+    padding-right: 1vw;
+    margin: 2vh 4.5vw;
+    flex: 1;
+}
+
+
+#active-tasks{
+    /* border: 1px solid red; */
+}
+
+#postData{
+    display: absolute;
+    height: 8vh;
+    /* border: 2px solid yellow; */
+    margin-top: 2vh;
+    margin-left: 25vw;
+    text-align: center;
+    /* justify-content: center; */
+}
+
+.tasks-head{
+    align-items: center;
+    justify-content: center;
+    /* border: 4px solid purple; */
+}
+
+.stopButton{
+    border: 0.2vw solid black;
+    background-color: red;
+    border-radius: 100vw;
+    color: white;
+    font-size: 2vh;
+    /* text-align: right; 
+    justify-content: flex-end; */
 }
