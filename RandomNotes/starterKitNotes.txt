@@ -1,0 +1,3 @@
+this file is notes from an ELEGOO super starter kit manual 
+
+Arduino Cookbook written by Michael Margolis --> more in depth Arduino stuff
