@@ -24,6 +24,9 @@ function updateLog(message){
 })();
 
 function currentTime(){
+    const timeContainer = document.getElementById("LCD-container");
+    timeContainer.innerHTML = ''
+
     // Create object date with template Date();
     let date = new Date();
     // Create hours, minutes, seconds, morning/night variables
@@ -48,7 +51,12 @@ function currentTime(){
     let time = hh + ":" + mm + ":" + ss + " " + session;
 
     // Print time to div with ID 'LCD-screen'
-    document.getElementById("LCD-screen").innerText = time;
+    // document.getElementById("LCD-screen").innerText = time;
+    const timeDisplay = document.createElement('div');
+    timeDisplay.textContent = time;
+    timeContainer.appendChild(timeDisplay);
+
+    
     // Make the clock update once every second (1000ms)
     let t = setTimeout(function(){ currentTime() }, 1000);
 }
