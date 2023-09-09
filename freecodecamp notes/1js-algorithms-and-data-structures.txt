@@ -1,0 +1,46 @@
+JavaScript algorithms and data structures notes
+
+1D arrays:
+    Object identified by [] that
+    Contains booleans, strings, and numbers, among other js data types
+
+Multi-dimensional arrays:
+    Array that contains other arrays;
+    (Arrays are capable of storing complex objects)
+
+Array methods:
+    .push() -> adds arguments to the end of an array,
+        returns the new length of the array
+    .unshift() -> adds arguments to the beginning of an array
+        returns the new length of the array
+    .pop() -> removes exactly one element from end of an array
+    .shift() -> removes exactly one element from beginning of an array
+NOTE: .pop() and .shift() take no arguments and only work one at a time.
+    .splice() -> removes elements beginning at index of first argument,
+        removes number of elements equal to value of the second argument,
+        adds every other argument in place of removed elements
+    .slice() -> returns elements starting at index of first argument,
+        up to but not including the index of the second argument
+    .array2 = [...array1] -> copy every element from array1 to array2
+        without changing array1
+    .indexOf() -> returns index of argument (which refers to an array element)
+NOTE: .indexOf() returns -1 when no element is found
+
+Object notes:
+    Object properties can be nested infinitely, and values can be any date type 
+        and even other objects
+    Both dot notation and brackets notation can be used; bracket notation needs 
+        specification of string or variable, whereas dot notation 
+        automatically refers to strings
+    Very fast lookup times
+NOTE: Accessing nested objects with brackets notation uses 
+    object[keyOuter][keyInner] NOT object[keyOuter[keyInner]]
+
+Object methods:
+    delete object[theKey] -> deletes key and value related to key of object
+    .hasOwnProperty(key) -> returns boolean value if object has a key 
+        with name specified by argument
+    'theKey' in object -> returns boolean value if object has a key
+        with name specified by part in quotation marks
+    Object.keys() -> returns an array of strings representing each property 
+        in the object in no specific order

@@ -1,0 +1,22 @@
+You can iterate through a string using a for loop just like an array!
+
+    function reverseString(str) {
+    let reversedStr = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversedStr += str[i];
+    }
+    return reversedStr;
+    }
+
+you can increment before the variable is read with ++i rather than i++
+
+
+    in cases where a variable is reassigned with an increment on the same line, the increment 
+    method overrides the variable reassignment using a copy of the original variable value:
+
+    function adder(x){
+        x = x + 2
+    }
+    let i = 0;
+    adder(i++);
+// adder returns 1 because of i++
