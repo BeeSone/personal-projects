@@ -1,0 +1,13 @@
+own property -> defined directly on the instance object
+prototype property -> defined beneath the instance of a referenced object, is 
+                        searched for when a property is called and is not found in
+                        the "own properties" of an object
+
+myObj instanceof ObjConstructor; -> returns true if myObj was created using the ObjConstructor constructor.
+
+.constructor returns the name of the constructor that was used to create the object referenced
+    (although the proeprty constructor can be overriden)
+
+When you initalize the prototype of an object seperately it is 
+good to set the constructor property, as the constructor property automatically
+is set to the value <Object> otherwise.

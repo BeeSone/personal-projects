@@ -1,0 +1,8 @@
+.push() -> end
+.unshift() -> beginning
+
+.pop() -> end
+.shift() -> end
+
+.splice(beginningIndex, howMany, ?replacedElements) -> 
+.slice(beginningIndex, endIndex) -> returns elements from beginning to end, not including end, without changing original
